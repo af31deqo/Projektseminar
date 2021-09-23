@@ -53,6 +53,7 @@ disparity = stereo_depth_map(rectified_pair,0,21)
  
 print('Done! Let\'s look at depth map')
 
+#distance in x, y position with mouse click event
 def show_distance(event,x,y,args,params):
         point = (x,y)
         global x_pos
@@ -65,7 +66,7 @@ def show_distance(event,x,y,args,params):
 
 def compute_depth(x_pos,y_pos,baseline,alpha):
         f_pixel = (Imgsize[0]*0.5)/np.tan(alph*0.5*np.pi/180)
-        z = (baseline*f_pixel)/disparity[x_pos,ya_pos]
+        z = (baseline*f_pixel)/disparity[x_pos,y_pos] 
         return z
 
 plt.imshow(disparity)
