@@ -1,4 +1,4 @@
-
+#This codewill be used to find the optimal parameters for the StereoBM algorithm
 import numpy as np
 import cv2
 
